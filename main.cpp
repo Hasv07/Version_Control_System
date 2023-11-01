@@ -16,6 +16,16 @@ double getAverage(const std::vector<int>& vec) {
 }
 
 
+int getMin(const std::vector<int>& vec) {
+    int min = vec[0];
+    for (int i = 1; i < vec.size(); ++i) {
+        if (vec[i] < min) {
+            min = vec[i];
+        }
+    }
+    return min;
+}
+
 int main(){
 
     std::vector<int> numbers = {1, 2, 3};
@@ -25,6 +35,10 @@ int main(){
 
     double average = getAverage(numbers);
     std::cout << "Average: " << average << std::endl;
+
+
+    int min = getMin(numbers);
+    std::cout << "Minimum: " << min << std::endl;
 
 
 }
